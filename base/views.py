@@ -14,7 +14,6 @@ from django.http import HttpResponse
 class GetInfoView(APIView):
 
     def get(self,request,id):
-        
         url =f'https://reqres.in/api/users/{id}'
         result = requests.get(url)
         return Response(json.loads(result.text))
