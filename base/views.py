@@ -17,5 +17,3 @@ class GetInfoView(APIView):
         url =f'https://reqres.in/api/users/{id}'
         result = requests.get(url)
         return Response(json.loads(result.text))
-
-
